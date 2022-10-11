@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function XL(L,F){
+            const XL= 2*Math.PI*L*F;
+            return XL;
+            }
+            function XC(C,F){
+                const XC= 1/(2*Math.PI*F*C);
+                return XC;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <script>
+                const F= Number(prompt("Ingresar Frecuencia "))
+                const L= Number(prompt("Ingresar Inductancia "))
+                alert(XL(L,F))
+            </script>
+        </form>
+    </body>
+</html>
