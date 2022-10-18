@@ -9,6 +9,23 @@
                 const XC= 1/(2*Math.PI*F*C);
                 return XC;
             }
+            function square(x){
+                return x*x;
+            }
+            function Z(R,C,L,F)
+               cuadradoZ= (square(R) + square((XL(L,F)-XC(C,F)));
+               resultadoZ= Math.sqrt (cuadradoZ);
+            return resultadoZ;
+            }
+              function Z(R,C,L,F)
+               cuadradoZ= (square(R) + square((XL(L,F)-XC(C,F)));
+               resultadoZ= Math.sqrt (cuadradoZ);
+            return resultadoZ;
+            }
+            function FI(R,C,L,F)
+               resultadoFI= Math.sqrt ((XL(L,F)-XC(F,C))/R);
+            return resultadoFI;
+            }
         </script>
     </head>
     <body>
@@ -16,8 +33,12 @@
             <script>
                 const F= Number(prompt("Ingresar Frecuencia "))
                 const L= Number(prompt("Ingresar Inductancia "))
+                const C= Number(prompt("Ingresar la capacitancia "))
+                const R= Number(prompt("Ingresar la resistencia "))
                 alert(XL(L,F));
                 alert(XC(L,F));
+                alert(Z(R,C,L,F));
+                alert(FI(R,C,L,F));
             </script>
         </form>
     </body>
