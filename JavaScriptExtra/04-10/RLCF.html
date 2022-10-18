@@ -2,11 +2,11 @@
     <head>
         <script type="text/javascript">
             function XL(L,F){
-            const XL= 2*Math.PI*L*F;
+            resultadoXL= 2*Math.PI*L*F;
             return XL;
             }
             function XC(C,F){
-                const XC= 1/(2*Math.PI*F*C);
+                resultadoXC= 1/(2*Math.PI*F*C);
                 return XC;
             }
             function square(x){
@@ -23,7 +23,7 @@
             return resultadoZ;
             }
             function FI(R,C,L,F)
-               resultadoFI= Math.sqrt ((XL(L,F)-XC(F,C))/R);
+               resultadoFI= Math.atan ((XL(L,F)-XC(F,C))/R);
             return resultadoFI;
             }
         </script>
@@ -39,10 +39,10 @@
                 alert(XC(L,F));
                 alert(Z(R,C,L,F));
                 alert(FI(R,C,L,F));
-                document.write("zbr/>El valor de XL es "+XL);
-                document.write("<br/>El valor de XC es "+XC);
-                document.write("<br/>El valor de Z es "+Z);
-                document.write("<br/>El valor de FI es "+FI);
+                document.write("<br/>El valor de XL es "+resultadoXL);
+                document.write("<br/>El valor de XC es "+resultadoXC);
+                document.write("<br/>El valor de Z es "+resultadoZ);
+                document.write("<br/>El valor de FI es "+resultadoFI);
             </script>
         </form>
     </body>
